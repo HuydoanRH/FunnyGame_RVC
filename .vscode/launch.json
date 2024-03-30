@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "gcc build and debug active file",
+      "includePath": [
+        "${workspaceFolder}"
+      ],
+      " IntelliSenseMode": "clang-x64",
+      "configurations": [
+        {
+          "name": "Build",
+          "command": "gcc",
+          "args": [
+            "-g",
+            "${file}",
+            "-o",
+            "${fileDirname}/${fileBasenameNoExtension}"
+          ],
+          "problemMatcher": "$gcc"
+        },
+        {
+          "name": "Debug",
+          "command": "${fileDirname}/${fileBasenameNoExtension}",
+          "args": [],
+          "preLaunchTask": "build"
+        }
+      ]
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Workspace/3.Trainning_39G/2.Practice/4.C/3482_DoanDucHuy_C_Exercise/Project/FunnyGame/src",
+      "program": "c:/Workspace/3.Trainning_39G/2.Practice/4.C/3482_DoanDucHuy_C_Exercise/Project/FunnyGame/src/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
